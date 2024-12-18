@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <form action="SudokuServlet" method="post">
+        <table>
+            <!-- 9x9 Sudoku Grid -->
+            <% for (int i = 0; i < 9; i++) { %>
+                <tr>
+                    <% for (int j = 0; j < 9; j++) { %>
+                        <td>
+                            <input type="number" min="1" max="9" name="cell_<%= i %>_<%= j %>" />
+                        </td>
+                    <% } %>
+                </tr>
+            <% } %>
+        </table>
+        <button type="submit">Solve Sudoku</button>
+    </form>
+</body>
+</html>
